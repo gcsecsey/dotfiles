@@ -12,7 +12,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 # Download zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# Change plugins
+# Chmod plugins to avoid ZSH COMPFIX errors
+chmod 755 ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/*
+
+# Change plugins in .zshrc
 sed -i -e 's/ZSH_THEME=\".*\"/ZSH_THEME=\"avit\"/g' $HOME/.zshrc
 
 # Change ZSH_THEME to agnoster in .zshrc
