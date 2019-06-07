@@ -25,8 +25,8 @@ echo 'source ~/.purepower' >>! ~/.zshrc
 chmod 755 ${ZSH_CUSTOM}/plugins/*
 
 # Change plugins in .zshrc
-sed -i -e 's/plugins=\".*\"/plugins=(docker git npm zsh-autosuggestions zsh-syntax-highlighting)/g' ${HOME}/.zshrc
+sed -i -e 's/plugins=.*/plugins=(docker git npm zsh-autosuggestions zsh-syntax-highlighting)/g' ${HOME}/.zshrc
 
 # Change ZSH_THEME in .zshrc
-sed -i -e 's/ZSH_THEME=\".*\"/ZSH_THEME=\"powerlevel10k/powerlevel10k\"/g' ${HOME}/.zshrc
+sed -i -e 's/ZSH_THEME=.*/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g' ${HOME}/.zshrc
 
