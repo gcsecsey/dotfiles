@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # How to install:
-# bash -c "$(wget https://raw.githubusercontent.com/gcsecsey/dotfiles/master/install.sh -O -)"
+# sudo bash -c "$(wget https://raw.githubusercontent.com/gcsecsey/dotfiles/master/install.sh -O -)"
 
 # Ask for the administrator password upfront
 sudo -v
@@ -20,10 +20,10 @@ apps=(
 	python3-pip
 )
   
-apt install "${apps[@]}"
+apt install -y "${apps[@]}"
 
 # Set up oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/gcsecsey/dotfiles/master/oh-my-zsh-setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/gcsecsey/dotfiles/master/oh-my-zsh-setup.sh)"
 
 git init
 git remote add origin git@github.com:gcsecsey/dotfiles.git
