@@ -34,7 +34,7 @@ git pull origin master;
 for file in $(ls -A); do
   if [ "$file" != ".git" ] && \
      [ "$file" != "install.sh" ] && \
-     [ "$file" != "oh-my-zsh-setup.sh.sh" ] && \
+     [ "$file" != "oh-my-zsh-setup.sh" ] && \
      [ "$file" != "README.md" ] && \
      [ "$file" != "images" ]; then
       ln -sf $PWD/$file $HOME/
