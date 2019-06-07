@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 # How to install:
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/gcsecsey/dotfiles/master/oh-my-zsh-setup.sh)"
+# sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/gcsecsey/dotfiles/master/oh-my-zsh-setup.sh)"
 
 # Install oh-my-zsh
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended
+
+ZSH_CUSTOM = $HOME/.oh-my-zsh/custom
 
 # Download zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
