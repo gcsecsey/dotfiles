@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # How to install:
-# sh -c "$(wget https://raw.githubusercontent.com/gcsecsey/dotfiles/master/install.sh -O -)"
+# sudo sh -c "$(wget https://raw.githubusercontent.com/gcsecsey/dotfiles/master/install.sh -O -)"
 
 # Ask for the administrator password upfront
 sudo -v
