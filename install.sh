@@ -11,20 +11,19 @@ apt update
 
 # Install apps
 apps=(
-    curl
-		git
-		nodejs
-		npm
-		python
-		python3
-		wget
-	)
+	curl
+	git
+	nodejs
+	npm
+	python
+	python3
+	python3-pip
+)
   
 apt install "${apps[@]}"
-apt install python-pip python-dev build-essential
 
 # Set up oh-my-zsh
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/gcsecsey/dotfiles/master/oh-my-zsh-setup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/gcsecsey/dotfiles/master/oh-my-zsh-setup.sh)"
 
 git init
 git remote add origin git@github.com:gcsecsey/dotfiles.git
@@ -34,8 +33,8 @@ git pull origin master;
 
 for file in $(ls -A); do
   if [ "$file" != ".git" ] && \
-     [ "$file" != "setup.sh" ] && \
-     [ "$file" != "remote-setup.sh" ] && \
+     [ "$file" != "install.sh" ] && \
+     [ "$file" != "oh-my-zsh-setup.sh.sh" ] && \
      [ "$file" != "README.md" ] && \
      [ "$file" != "images" ]; then
       ln -sf $PWD/$file $HOME/
