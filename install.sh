@@ -18,6 +18,7 @@ apps=(
 	python
 	python3
 	python3-pip
+	zsh
 )
   
 apt install -y "${apps[@]}"
