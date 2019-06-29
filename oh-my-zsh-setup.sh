@@ -14,6 +14,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins
 # Download zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
 
+# Download zsh-completions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM}/plugins/zsh-completions
+
 # Download powerlevel10k
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM}/themes/powerlevel10k
 
@@ -25,7 +28,7 @@ echo 'source ~/.purepower' >>! ~/.zshrc
 chmod 755 ${ZSH_CUSTOM}/plugins/*
 
 # Change plugins in .zshrc
-sed -i -e 's/plugins=.*/plugins=(docker git npm zsh-autosuggestions zsh-syntax-highlighting)/g' ${HOME}/.zshrc
+sed -i -e 's/plugins=.*/plugins=(docker git npm zsh-autosuggestions zsh-syntax-highlighting zsh-completions)/g' ${HOME}/.zshrc
 
 # Change ZSH_THEME in .zshrc
 sed -i -e 's/ZSH_THEME=.*/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g' ${HOME}/.zshrc
