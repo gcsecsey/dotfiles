@@ -22,8 +22,8 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM}/plugins/zsh
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM}/themes/powerlevel10k
 
 # Download and set pure power config
-( cd && curl -fsSLO https://raw.githubusercontent.com/romkatv/dotfiles-public/master/.purepower )
-echo 'source ~/.purepower' >>! ~/.zshrc
+( cd ~ && curl -Lo .purepower https://raw.githubusercontent.com/romkatv/dotfiles-public/master/.purepower )
+echo 'source ~/.purepower' >> ~/.zshrc
 
 # Chmod plugins to avoid ZSH COMPFIX errors
 chmod 755 ${ZSH_CUSTOM}/plugins/*
