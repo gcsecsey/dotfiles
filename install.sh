@@ -20,7 +20,7 @@ apps=(
 	python3-pip
 	zsh
 )
-  
+
 apt install -y "${apps[@]}"
 
 # Set up oh-my-zsh
@@ -28,9 +28,9 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/gcsecsey/dotfiles/master
 
 git init
 git remote add origin git@github.com:gcsecsey/dotfiles.git
+git pull origin master
 
 # Symlink dotfiles
-git pull origin master;
 
 for file in $(ls -A); do
   if [ "$file" != ".git" ] && \
