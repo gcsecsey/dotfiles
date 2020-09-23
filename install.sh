@@ -30,8 +30,10 @@ git init
 git remote add origin git@github.com:gcsecsey/dotfiles.git
 git pull origin master
 
-# Symlink dotfiles
+# Symlink SSH keys from Windows
+ln -s "$(wslpath "$(wslvar USERPROFILE)")/.ssh" ~/.ssh
 
+# Symlink dotfiles
 for file in $(ls -A); do
   if [ "$file" != ".git" ] && \
      [ "$file" != "install.sh" ] && \
