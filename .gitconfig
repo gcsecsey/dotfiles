@@ -1,0 +1,5 @@
+[user]
+	name = Gergely Csecsey
+	email = gcsecsey@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
