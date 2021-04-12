@@ -1,5 +1,7 @@
 export ZSH=~/.oh-my-zsh
 
+eval "$(fnm env --use-on-cd)"
+
 # configure oh-my-zsh theme
 ZSH_THEME="powerlevel10k/powerlevel10k" # load p10k as oh-my-zsh theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh # load p10k personal config
