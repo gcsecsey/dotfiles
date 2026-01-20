@@ -14,7 +14,8 @@
   },
   "alwaysThinkingEnabled": true,
   "autoUpdatesChannel": "stable",
-  "feedbackSurveyState": {
-    "lastShownTime": 1753976868133
+  "attribution": {
+    "commit": "",
+    "pr": ""
   }
 }
