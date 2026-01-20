@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(npm:*)",
+      "Edit",
+      "Write"
+    ]
+  },
+  "enabledPlugins": {
+    "code-simplifier@claude-plugins-official": false
+  },
+  "alwaysThinkingEnabled": true,
+  "autoUpdatesChannel": "stable",
+  "feedbackSurveyState": {
+    "lastShownTime": 1753976868133
+  }
+}
