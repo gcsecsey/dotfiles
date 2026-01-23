@@ -22,6 +22,19 @@ chezmoi init https://github.com/gcsecsey/dotfiles
 chezmoi apply
 ```
 
+### WSL (Windows Subsystem for Linux)
+
+After running `chezmoi apply`, manually copy the WSL config (requires sudo):
+
+```bash
+sudo cp wsl/wsl.conf /etc/wsl.conf
+```
+
+Then restart WSL from PowerShell:
+```powershell
+wsl --shutdown
+```
+
 ### Linux
 
 ```bash
@@ -32,12 +45,39 @@ chezmoi apply
 
 ## After Setup
 
+### Secrets
+
 Create `~/.secrets` for API keys and other sensitive stuff (not tracked):
 
 ```bash
 # ~/.secrets
 export MY_API_KEY='your-key-here'
 ```
+
+### Claude Code Plugins
+
+After chezmoi apply, run the plugin installer to set up Claude Code plugins:
+
+```bash
+./install-claude-plugins.sh
+```
+
+This installs:
+- `claude-code-meta` — plugin management utilities
+- `code-simplifier` — code simplification tools
+- `context-a8c` — Automattic internal tools (requires a8c access)
+
+## What's Synced
+
+**Shell:** `.zshrc`, `.zshenv`, `.zprofile`, `.p10k.zsh`
+
+**Terminal:** `.tmux.conf`, `.wezterm.lua`
+
+**Claude Code:**
+- `~/.claude/CLAUDE.md` — global instructions
+- `~/.claude/settings.json` — permissions, preferences
+- `~/.claude/agents/` — custom subagents
+- `~/.claude/commands/` — custom slash commands
 
 ## Useful Commands
 
