@@ -1,0 +1,4 @@
+# Files to keep in repo but not copy to home directory
+install-claude-plugins.sh
+removeapps.ps1
+wsl
