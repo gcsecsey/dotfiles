@@ -1,4 +1,8 @@
 {
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "allow": [
       "Bash(mkdir:*)",
@@ -10,12 +14,11 @@
     ]
   },
   "enabledPlugins": {
-    "code-simplifier@claude-plugins-official": false
+    "code-simplifier@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
-  "autoUpdatesChannel": "stable",
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  }
+  "autoUpdatesChannel": "stable"
 }
