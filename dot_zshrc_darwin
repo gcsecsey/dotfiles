@@ -113,23 +113,18 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 eval "$(zoxide init zsh)"
 
 # atuin
-eval "$(atuin init zsh --disable-up-arrow)"
-
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+# eval "$(atuin init zsh)"
 
 freeport() { kill -9 $(lsof -ti:$@); }
-
-alias ys="SOURCEMAP=eval-source-map yarn start"
 
 # Load local secrets (API keys, etc.) - not tracked in dotfiles
 [ -f ~/.secrets ] && source ~/.secrets
 
-export CLAUDE_PROJECT_DIR="/Users/gcsecsey/projects"
+zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%b" "%%u%c"
+zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%b" "%u%c (%a)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export CLAUDE_PROJECT_DIR="/Users/gcsecsey/a8c-projects"
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
@@ -139,4 +134,15 @@ source <(fzf --zsh)
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+
+ytalbum() {
+  yt-dlp \
+    -x \
+    --audio-format mp3 \
+    --embed-metadata \
+    --convert-thumbnails png \
+    --ppa "ThumbnailsConvertor+ffmpeg_o:-c:v png -vf crop=\"'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\"" \
+    --embed-thumbnail \
+    -o "$HOME/Downloads/%(playlist)s/%(playlist_index)02d %(title)s.%(ext)s" \
+    "$1"
+}
