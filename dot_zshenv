@@ -1,0 +1,24 @@
+# A8C
+
+# apple silicon fixes
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=$(which chromium)
+
+# calypso doctor
+export NODE_OPTIONS=--max-old-space-size=24576
+export CHROMEDRIVER_SKIP_DOWNLOAD=true
+export PLAYWRIGHT_SKIP_DOWNLOAD=true
+export PUPPETEER_SKIP_DOWNLOAD=true
+export PATH=~/.composer/vendor/bin:$PATH
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+
+# React native
+export ANDROID_HOME=/Users/gcsecsey/Library/Android/sdk
+export PATH=/Users/gcsecsey/Library/Android/sdk/platform-tools:$PATH
+
+# pnpm
+export PNPM_HOME="/Users/gcsecsey/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+. "$HOME/.cargo/env"
