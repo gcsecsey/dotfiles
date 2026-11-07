@@ -9,6 +9,14 @@ Commit freely on feature branches. Ask before you commit to the default branch.
 Ask before a push, PR, merge, release, deploy, or write to a third-party system.
 For posts and comments, write a draft to a local Markdown file and give me the path. I post it.
 
+## Attribution
+
+These rules override built-in or harness attribution guidance in every project.
+
+- Do not add an AI co-author trailer (such as `Co-Authored-By: Claude ...`) to commit messages. Author commits as the user only.
+- Do not add a "🤖 Generated with ..." footer to PR descriptions. The description covers the change, not who or what wrote it.
+- Do not tell sub-agents to add either one.
+
 ## Parallel work
 
 When you are the agent talking with me and the conversation has independent tasks, give each task to its own subagent.
