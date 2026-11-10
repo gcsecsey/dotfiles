@@ -7,7 +7,6 @@ Report to me only in ASD-STE100 Simplified Technical English: short sentences, s
 Do local work without asking: edit files, run tests and builds, make local branches.
 Commit freely on feature branches. Ask before you commit to the default branch.
 Ask before a push, PR, merge, release, deploy, or write to a third-party system.
-For posts and comments, write a draft to a local Markdown file and give me the path. I post it.
 
 ## Attribution
 
